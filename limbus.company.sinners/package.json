@@ -1,0 +1,103 @@
+{
+    "name": "Limbus Company Sinners",
+    "description": "A dark TeamSpeak theme with each Sinner's name and principal color. Based on Neon Reaper Dark (https://github.com/AnthonyDac/neon-reaper-dark).",
+    "version": "2.0.0",
+    "identifier": "limbus.company.sinners",
+    "engines": {
+        "teamspeak": 1
+    },
+    "repository": {
+        "url": "https://github.com/annielymariah/limbus-company-sinners-theme",
+        "directory": "limbus.company.sinners",
+        "type": "git"
+    },
+    "image": "Thumbnail.png",
+    "license": "MIT",
+    "author": {
+        "name": "Valhalla",
+        "email": "anthony.dac@hotmail.fr",
+        "userTag": "TeamSpeak@myteamspeak.com"
+    },
+    "content": {
+        "themes": [
+            {
+                "name": "01 Yi Sang",
+                "source": "YiSang.css",
+                "image": "YiSang.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "02 Faust",
+                "source": "Faust.css",
+                "image": "Faust.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "03 Don Quixote",
+                "source": "DonQuixote.css",
+                "image": "DonQuixote.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "04 Ryōshū",
+                "source": "Ryoshu.css",
+                "image": "Ryoshu.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "05 Meursault",
+                "source": "Meursault.css",
+                "image": "Meursault.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "06 Hong Lu",
+                "source": "HongLu.css",
+                "image": "HongLu.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "07 Heathcliff",
+                "source": "Heathcliff.css",
+                "image": "Heathcliff.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "08 Ishmael",
+                "source": "Ishmael.css",
+                "image": "Ishmael.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "09 Rodion",
+                "source": "Rodion.css",
+                "image": "Rodion.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "10 Dante (Gerente Executivo)",
+                "source": "Dante.css",
+                "image": "Dante.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "11 Sinclair",
+                "source": "Sinclair.css",
+                "image": "Sinclair.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "12 Outis",
+                "source": "Outis.css",
+                "image": "Outis.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "13 Gregor",
+                "source": "Gregor.css",
+                "image": "Gregor.png",
+                "apiVersion": 1
+            }
+        ]
+    }
+}

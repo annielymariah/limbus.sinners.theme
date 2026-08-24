@@ -1,0 +1,10 @@
+@import url(Glassmorphism.css);
+
+:root, ::after, ::before {
+    --custom-color-accent-light: #8b9c15;
+    --custom-color-accent-dark: #64700f;
+    --custom-color-accent-light-t: rgba(139, 156, 21, 0.5);
+    --custom-color-accent-dark-t: rgba(100, 112, 15, 0.5);
+    --custom-color-slider1: #8b9c15;
+    --custom-color-slider2: #b7c26e;
+}

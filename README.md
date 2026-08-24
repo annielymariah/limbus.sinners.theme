@@ -1,51 +1,56 @@
-# Reaper — Neon Dark + Glass
+# Limbus Company Sinners
 
-![Aperçu du thème](Thumbnail.png)
+Tema escuro para TeamSpeak com efeito de vidro (glassmorphism) e uma variante por Sinner, cada uma com o nome e a cor principal do personagem.
 
-Un thème TeamSpeak sombre avec accents néon et effet "verre" (glassmorphism).
+Baseado no [Neon Reaper Dark](https://github.com/AnthonyDac/neon-reaper-dark), de AnthonyDac (Valhalla).
 
-## Ce que ça fait (version courte)
-- Fond sombre + couleurs d’accent (bleu, rose, violet, orange, vert, etc.).
-- Effet verre: flou + transparence + bordure douce sur les panneaux (si supporté par votre système). 
-- Plusieurs variantes prêtes à l’emploi: "Reaper Blue", "Reaper Magenta", "Reaper Indigo", etc.
+## Sinners
+- **01 Yi Sang** — Dreamy Grey (`#7b858d`)
+- **02 Faust** — Cerebral Pink (`#ebd7db`)
+- **03 Don Quixote** — Oblivion Yellow (`#ffef23`)
+- **04 Ryōshū** — Smoky Scarlet (`#cf0000`)
+- **05 Meursault** — Decay Blue (`#344152`)
+- **06 Hong Lu** — Naïve Cyan (`#5bffde`)
+- **07 Heathcliff** — Furious Violet (`#4e3076`)
+- **08 Ishmael** — Isolate Orange (`#ff9500`)
+- **09 Rodion** — Lusty Burgundy (`#9c1e34`)
+- **10 Dante (Gerente Executivo)** — Inferno Red (`#b01c37`)
+- **11 Sinclair** — Immature Green (`#8b9c15`)
+- **12 Outis** — Militant Olive (`#586940`)
+- **13 Gregor** — Verminous Brown (`#754e38`)
 
-## Installer / Utiliser
-1) Téléchargez ce dossier (ou le .zip) du thème.
-2) TeamSpeak → Settings → Appearance → Themes → Importer (ou copiez le dossier dans le répertoire de thèmes de TeamSpeak).
-3) Redémarrez TeamSpeak si nécessaire.
-4) Dans la liste, sélectionnez la variante voulue (ex: "Reaper Blue").
+## Instalar / Usar
+1. Baixe esta pasta (ou o .zip) do tema.
+2. TeamSpeak → Settings → Appearance → Themes → Importar (ou copie a pasta `limbus.company.sinners` para o diretório de temas do TeamSpeak).
+3. Reinicie o TeamSpeak se necessário.
+4. Na lista, escolha o Sinner desejado (ex: "08 Ishmael").
 
-## Personnaliser vite fait
-- Couleur: ouvrez la variante (ex: `Blue.css`) et changez les variables:
-  `--custom-color-accent-light`, `--custom-color-accent-dark` (+ versions `-t`), `--custom-color-slider1/2`.
-- Verre: dans `Glassmorphism.css`, ajustez `--glass-blur` (flou), `--glass-radius` (arrondi), `--glass-bg` (transparence).
+## Personalizar
+- Cor: abra a variante (ex: `Ishmael.css`) e ajuste `--custom-color-accent-light`, `--custom-color-accent-dark` (e as versões `-t`), `--custom-color-slider1/2`.
+- Vidro: em `Glassmorphism.css`, ajuste `--glass-blur` (desfoque), `--glass-radius` (arredondamento), `--glass-bg` (transparência).
 
-Notes:
-- Si le flou (`backdrop-filter`) n’est pas supporté, un rendu sans flou s’applique automatiquement.
-- Sur machines modestes, diminuez `--glass-blur` pour de meilleures perfs.
+Notas:
+- Se o desfoque (`backdrop-filter`) não for suportado, um fallback sem blur é aplicado automaticamente.
+- Em máquinas mais modestas, diminua `--glass-blur` para melhor desempenho.
 
-Licence: MIT.
+Licença: MIT.
 
 ---
 
-# Reaper — Neon Dark + Glass (EN)
+# Limbus Company Sinners (EN)
 
-Dark TeamSpeak theme with neon accents and a subtle “glass” (glassmorphism) effect.
+Dark TeamSpeak theme with a glassmorphism effect and one variant per Sinner, each using that character’s name and principal color.
 
-## What it does (short)
-- Dark base + accent colors (blue, pink, purple, orange, green, etc.).
-- Glass effect: blur + transparency + soft border on panels (if supported by your system).
-- Many ready-to-use variants: "Reaper Blue", "Reaper Magenta", "Reaper Indigo", and more.
+Based on [Neon Reaper Dark](https://github.com/AnthonyDac/neon-reaper-dark) by AnthonyDac (Valhalla).
 
 ## Install / Use
-1) Download this folder (or the theme .zip).
-2) TeamSpeak → Settings → Appearance → Themes → Import (or copy the folder into TeamSpeak’s themes directory).
-3) Restart TeamSpeak if needed.
-4) In the list, pick your variant (e.g. "Reaper Blue").
+1. Download this folder (or the theme .zip).
+2. TeamSpeak → Settings → Appearance → Themes → Import (or copy the `limbus.company.sinners` folder into TeamSpeak’s themes directory).
+3. Restart TeamSpeak if needed.
+4. In the list, pick the Sinner you want (e.g. "08 Ishmael").
 
 ## Quick customize
-- Color: open the chosen variant (e.g. `Blue.css`) and tweak variables:
-  `--custom-color-accent-light`, `--custom-color-accent-dark` (+ `-t` versions), `--custom-color-slider1/2`.
+- Color: open the chosen variant (e.g. `Ishmael.css`) and tweak `--custom-color-accent-light`, `--custom-color-accent-dark` (plus `-t` versions), `--custom-color-slider1/2`.
 - Glass: in `Glassmorphism.css`, adjust `--glass-blur` (blur), `--glass-radius` (roundness), `--glass-bg` (transparency).
 
 Notes:

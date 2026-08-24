@@ -11,13 +11,13 @@
   --custom-value-scrollbar-width: 6px;
   --default-tsv-tint: var(--custom-color-accent-light);
 
-  --custom-value-dark1: #0a0a0f;
-  --custom-value-dark2: #121216;
-  --custom-value-dark3: #1a1a1f;
-  --custom-value-dark4: #171718;
-  --custom-value-dark5: #212125;
-  --custom-value-dark6: #252529;
-  --custom-value-dark7: #343438;
+  --custom-value-dark1: #000000;
+  --custom-value-dark2: #050506;
+  --custom-value-dark3: #08080a;
+  --custom-value-dark4: #060607;
+  --custom-value-dark5: #0a0a0c;
+  --custom-value-dark6: #0c0c0e;
+  --custom-value-dark7: #141416;
 }
 
 :root,
@@ -43,6 +43,7 @@
   --ts-select-arrow-color: var(--custom-color-accent-light) !important;
   --tsv-font-color: #d7d7d7 !important;
   --tsv-font-subtitle-color: #b1b1b1 !important;
+  --tsv-font-family: "Bahnschrift", "Segoe UI Variable", "Segoe UI", sans-serif !important;
   --ts-third-font-color: #fdfdfd !important;
   --tsv-bg: var(--custom-value-dark6) !important;
   --tsv-shaded-bg: var(--custom-value-dark3) !important;
@@ -88,6 +89,57 @@
   --highlight-outline-color: var(--custom-color-accent-dark-t) !important;
   --tsv-preview-bg: var(--custom-value-dark7) !important;
   --tsv-highlight-header-bg: linear-gradient(to right, var(--custom-color-accent-dark-t) 0, var(--custom-value-dark5) 100%) !important;
+  --tsv-icon-tint: var(--custom-color-accent-light) !important;
+  --tsv-icon-tint2: var(--custom-color-accent-light) !important;
+  --ts-brand-color-bl: var(--custom-color-accent-light) !important;
+  --tsv-border-radius: 6px !important;
+  --tsv-border-radius-large: 8px !important;
+  --tsv-border-radius-small: 4px !important;
+  --ts-primary-background: #000000 !important;
+}
+
+.tsv-icon-teamspeak-label {
+  --tsv-icon-tint: var(--custom-color-accent-light) !important;
+}
+
+.tsv-icon-teamspeak-label .tsv-icon-tint-fill {
+  fill: var(--custom-color-accent-light) !important;
+}
+
+html,
+body,
+#app,
+main {
+  font-family: var(--tsv-font-family) !important;
+  background: #000000 !important;
+}
+
+button,
+input,
+select,
+textarea,
+label,
+.tsv-font-content,
+.ts-font-content {
+  font-family: var(--tsv-font-family) !important;
+}
+
+.tsv-button,
+.tsv-card,
+.tsv-preview,
+.tsv-deviant,
+.tsv-highlight-header,
+.ts-chat-input-container,
+.ts-toggle,
+.tsv-sidebar .tsv-body-background,
+.tsv-dashboard-servers__content,
+.tsv-dashboard-chats,
+.tsv-dashboard-news,
+.tsv-context-menu,
+.ts-context-menu,
+.ts-tooltip,
+.ts-chat-room-event-bubble {
+  border-radius: 6px !important;
 }
 
 /* SELF */
@@ -110,7 +162,7 @@
 
 /* CHANNEL BACKGROUND */
 .ts-server-tree-item-background-no-image {
-  background: linear-gradient(to right, #17191c 50%, #1e1e1e 100%) !important;
+  background: linear-gradient(to right, #050506 50%, #0a0a0c 100%) !important;
   }
 
 /* SERVER TREE HORIZONTAL LINE */
@@ -360,21 +412,23 @@ strong {
 :root,
 ::before,
 ::after {
+
   /* Glass tunables */
-  --glass-blur: 16px;
-  --glass-saturation: 120%;
-  --glass-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-  --glass-radius: 12px;
+  
+  --glass-blur: 8px;
+  --glass-saturation: 130%;
+  --glass-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+  --glass-radius: 6px;
 
-  --glass-bg: rgba(255, 255, 255, 0.06);
-  --glass-bg-strong: rgba(255, 255, 255, 0.12);
-  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-bg: rgba(0, 0, 0, 0.78);
+  --glass-bg-strong: rgba(0, 0, 0, 0.9);
+  --glass-border: var(--custom-color-accent-dark-t);
 
-  --glass-tint: linear-gradient(135deg, var(--custom-color-accent-dark-t) 0%, rgba(255, 255, 255, 0) 60%);
-  --glass-tint-strong: linear-gradient(135deg, var(--custom-color-accent-light-t) 0%, rgba(255, 255, 255, 0) 70%);
+  --glass-tint: linear-gradient(165deg, var(--custom-color-accent-dark-t) 0%, rgba(0, 0, 0, 0.45) 38%, rgba(0, 0, 0, 0) 78%);
+  --glass-tint-strong: linear-gradient(165deg, var(--custom-color-accent-light-t) 0%, var(--custom-color-accent-dark-t) 28%, rgba(0, 0, 0, 0.2) 72%);
 
-  --glass-bubble-bg: rgba(255, 255, 255, 0.04);
-  --glass-menu-bg: rgba(20, 20, 20, 0.35);
+  --glass-bubble-bg: rgba(0, 0, 0, 0.7);
+  --glass-menu-bg: rgba(0, 0, 0, 0.92);
 }
 
 @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
@@ -396,7 +450,7 @@ strong {
     backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
     box-shadow: var(--glass-shadow);
     border-bottom: 1px solid var(--glass-border);
-    border-radius: calc(var(--glass-radius) - 4px);
+    border-radius: 6px;
   }
 
   .tsv-dashboard-servers__content,
@@ -442,7 +496,7 @@ strong {
     -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.6));
     backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.6));
     border: 1px solid var(--glass-border);
-    border-radius: calc(var(--glass-radius) - 4px);
+    border-radius: 6px;
   }
   .ts-chat-room-event-detailed:not(.ts-currently-referencing, .apparently-people-like-huge-faces) .ts-chat-room-event-bubble::before {
     border-right-color: var(--glass-bubble-bg) !important;
@@ -453,7 +507,7 @@ strong {
     -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.5));
     backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.5));
     border-color: var(--glass-border) !important;
-    border-radius: calc(var(--glass-radius) - 2px);
+    border-radius: 6px;
   }
 
   .tsv-context-menu,
@@ -465,7 +519,7 @@ strong {
     backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
     border: 1px solid var(--glass-border) !important;
     box-shadow: var(--glass-shadow);
-    border-radius: 10px;
+    border-radius: var(--glass-radius);
   }
 
   :root,
@@ -500,11 +554,12 @@ strong {
   .ts-context-menu,
   .menu,
   .ts-tooltip {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid rgba(255, 255, 255, 0.18) !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+    background: #000000 !important;
+    border: 1px solid var(--custom-color-accent-dark-t) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 6px !important;
   }
   .ts-chat-room-event-detailed:not(.ts-currently-referencing, .apparently-people-like-huge-faces) .ts-chat-room-event-bubble::before {
-    border-right-color: rgba(255, 255, 255, 0.08) !important;
+    border-right-color: rgba(8, 8, 12, 0.88) !important;
   }
 }

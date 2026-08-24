@@ -1,21 +1,20 @@
 {
     "name": "Limbus Company Sinners",
     "description": "A dark TeamSpeak theme with each Sinner's name and principal color. Based on Neon Reaper Dark (https://github.com/AnthonyDac/neon-reaper-dark).",
-    "version": "2.0.0",
+    "version": "2.0.2",
     "identifier": "limbus.company.sinners",
     "engines": {
         "teamspeak": 1
     },
     "repository": {
         "url": "https://github.com/annielymariah/limbus-company-sinners-theme",
-        "directory": "limbus.company.sinners",
         "type": "git"
     },
     "image": "Thumbnail.png",
     "license": "MIT",
     "author": {
-        "name": "Valhalla",
-        "email": "anthony.dac@hotmail.fr",
+        "name": "Anniely Mariah",
+        "email": "annielyms@gmail.com",
         "userTag": "TeamSpeak@myteamspeak.com"
     },
     "content": {
@@ -75,7 +74,7 @@
                 "apiVersion": 1
             },
             {
-                "name": "10 Dante (Gerente Executivo)",
+                "name": "10 Dante",
                 "source": "Dante.css",
                 "image": "Dante.png",
                 "apiVersion": 1

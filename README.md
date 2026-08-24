@@ -14,14 +14,14 @@ Baseado no [Neon Reaper Dark](https://github.com/AnthonyDac/neon-reaper-dark), d
 - **07 Heathcliff** — Furious Violet (`#4e3076`)
 - **08 Ishmael** — Isolate Orange (`#ff9500`)
 - **09 Rodion** — Lusty Burgundy (`#9c1e34`)
-- **10 Dante (Gerente Executivo)** — Inferno Red (`#b01c37`)
+- **10 Dante** — Inferno Red (`#b01c37`)
 - **11 Sinclair** — Immature Green (`#8b9c15`)
 - **12 Outis** — Militant Olive (`#586940`)
 - **13 Gregor** — Verminous Brown (`#754e38`)
 
 ## Instalar / Usar
 1. Baixe esta pasta (ou o .zip) do tema.
-2. TeamSpeak → Settings → Appearance → Themes → Importar (ou copie a pasta `limbus.company.sinners` para o diretório de temas do TeamSpeak).
+2. TeamSpeak → Settings → Appearance → Themes → Importar (ou copie esta pasta para `%appdata%\TeamSpeak\Default\extensions`).
 3. Reinicie o TeamSpeak se necessário.
 4. Na lista, escolha o Sinner desejado (ex: "08 Ishmael").
 
@@ -45,7 +45,7 @@ Based on [Neon Reaper Dark](https://github.com/AnthonyDac/neon-reaper-dark) by A
 
 ## Install / Use
 1. Download this folder (or the theme .zip).
-2. TeamSpeak → Settings → Appearance → Themes → Import (or copy the `limbus.company.sinners` folder into TeamSpeak’s themes directory).
+2. TeamSpeak → Settings → Appearance → Themes → Import (or copy this folder into `%appdata%\TeamSpeak\Default\extensions`).
 3. Restart TeamSpeak if needed.
 4. In the list, pick the Sinner you want (e.g. "08 Ishmael").
 

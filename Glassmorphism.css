@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("fonts/Pretendard-Regular.subset.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("fonts/Pretendard-Medium.subset.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("fonts/Pretendard-SemiBold.subset.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("fonts/Pretendard-Bold.subset.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root,
 ::after,
 ::before {
@@ -43,7 +75,7 @@
   --ts-select-arrow-color: var(--custom-color-accent-light) !important;
   --tsv-font-color: #d7d7d7 !important;
   --tsv-font-subtitle-color: #b1b1b1 !important;
-  --tsv-font-family: "Bahnschrift", "Segoe UI Variable", "Segoe UI", sans-serif !important;
+  --tsv-font-family: "Pretendard", "Segoe UI Variable", "Segoe UI", sans-serif !important;
   --ts-third-font-color: #fdfdfd !important;
   --tsv-bg: var(--custom-value-dark6) !important;
   --tsv-shaded-bg: var(--custom-value-dark3) !important;
@@ -120,7 +152,8 @@ select,
 textarea,
 label,
 .tsv-font-content,
-.ts-font-content {
+.ts-font-content,
+.ts-parsed-text-content {
   font-family: var(--tsv-font-family) !important;
 }
 

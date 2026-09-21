@@ -1,0 +1,634 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("fonts/Pretendard-Regular.subset.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("fonts/Pretendard-Medium.subset.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("fonts/Pretendard-SemiBold.subset.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("fonts/Pretendard-Bold.subset.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root,
+::after,
+::before {
+  --custom-color-accent-light: #b01c37;
+  --custom-color-accent-dark: #7f1428;
+  --custom-color-accent-light-t: rgba(176, 28, 55, 0.5);
+  --custom-color-accent-dark-t: rgba(127, 20, 40, 0.5);
+  --custom-color-slider1: #b01c37;
+  --custom-color-slider2: #ce7283;
+  --custom-color-secondary-text: #5c5c66;
+  --custom-value-scrollbar-width: 6px;
+  --default-tsv-tint: var(--custom-color-accent-light);
+
+  /* Surface scale (light): 1 = brightest panel, 7 = deepest shade */
+  --custom-value-dark1: #ffffff;
+  --custom-value-dark2: #f7f7f9;
+  --custom-value-dark3: #f0f0f3;
+  --custom-value-dark4: #ebebef;
+  --custom-value-dark5: #e4e4e9;
+  --custom-value-dark6: #fafafb;
+  --custom-value-dark7: #d4d4dc;
+
+  --custom-value-selection-mix: #ffffff;
+  --custom-value-on-accent: #ffffff;
+}
+
+:root,
+::after,
+::before {
+  --tsv-tint: var(--custom-color-accent-light) !important;
+  --tsv-tint2: var(--custom-color-accent-dark) !important;
+  --tsv-separation-border: none !important;
+  --tsv-control-handle-active-bg: var(--custom-color-accent-light) !important;
+  --tsv-button-bg: var(--custom-color-accent-dark) !important;
+  --tsv-button-hover-bg: var(--custom-color-accent-light) !important;
+  --ts-menu-action-color: var(--custom-color-accent-dark) !important;
+  --tsv-chat-remote-bg: var(--custom-value-dark4) !important;
+  --tsv-chat-self-bg: var(--custom-value-dark4) !important;
+  --tsv-chat-deleted-bg: var(--custom-value-dark4) !important;
+  --tsv-chat-deleted-font-color: #c41e3a !important;
+  --tsv-chat-link-color: var(--custom-color-accent-dark) !important;
+  --tsv-chat-remote-font-color: var(--tsv-chat-self-font-color) !important;
+  --tsv-chat-self-font-color: var(--tsv-chat-self-font-color) !important;
+  --ts-chat-system-highlight-text-color: var(--custom-color-accent-dark) !important;
+  --tsv-highlight-color: var(--custom-color-accent-light) !important;
+  --ts-drag-border: var(--custom-color-accent-light) !important;
+  --ts-select-arrow-color: var(--custom-color-accent-light) !important;
+  --tsv-font-color: #1c1c22 !important;
+  --tsv-font-subtitle-color: #5c5c66 !important;
+  --tsv-font-family: "Pretendard", "Segoe UI Variable", "Segoe UI", sans-serif !important;
+  --ts-third-font-color: #2a2a32 !important;
+  --tsv-bg: var(--custom-value-dark6) !important;
+  --tsv-shaded-bg: var(--custom-value-dark3) !important;
+  --tsv-contrast-bg: var(--custom-value-dark1) !important;
+  --tsv-contrast-strong-bg: var(--custom-value-dark1) !important;
+  --ts-context-menu-background: var(--custom-value-dark1) !important;
+  --tsv-context-menu-border: var(--custom-value-dark5) !important;
+  --tsv-context-menu-item-selection: color-mix(in srgb, var(--custom-color-accent-light) 28%, #ffffff) !important;
+  --tsv-item-selection: color-mix(in srgb, var(--custom-color-accent-light) 22%, #ffffff) !important;
+  --tsv-shaded-item-selection: color-mix(in srgb, var(--custom-color-accent-light) 22%, #ffffff) !important;
+  --tsv-shaded-bg-selection: color-mix(in srgb, var(--custom-color-accent-light) 35%, #ffffff) !important;
+  --ts-menu-action-background-hover: color-mix(in srgb, var(--custom-color-accent-light) 28%, #ffffff) !important;
+  --ts-tree-item-hover-bg-color: var(--custom-color-accent-light-t) !important;
+  --tsv-header-bg: linear-gradient(to bottom, var(--tsv-shaded-bg), var(--tsv-contrast-bg)) !important;
+  --ts-chat-system-message-bg: var(--tsv-contrast-bg) !important;
+  --tsv-unrelated-activity-header-bg: none !important;
+  --tsv-slider-track-bg: var(--custom-value-dark5) !important;
+  --tsv-client-silent--gradient-start: var(--tsv-bg) !important;
+  --tsv-client-silent--gradient-stop: var(--tsv-contrast-bg) !important;
+  --tsv-client-talking--gradient-start: var(--custom-color-accent-light) !important;
+  --tsv-client-talking--gradient-stop: var(--custom-color-accent-dark) !important;
+  --ts-chat-system-message-color: #1c1c220c !important;
+  --tsv-scrollbar-bg: var(--custom-value-dark5) !important;
+  --tsv-scrollbar-chunks--bg-1: var(--custom-color-accent-light) !important;
+  --tsv-scrollbar-chunks--bg-2: var(--custom-color-accent-dark-t) !important;
+
+  --tsv-chat-link-color: var(--custom-color-accent-dark) !important;
+  --strong-bg: var(--custom-value-dark4) !important;
+  --ts-new-header-bg: var(--custom-value-dark3) !important;
+  --tsv-header-bg: var(--custom-value-dark4) !important;
+  --tsv-button-filled-bg: linear-gradient(45deg, var(--custom-color-accent-light), var(--custom-color-accent-dark)) !important;
+  --tsv-button-filled-disabled-bg: linear-gradient(45deg, var(--custom-color-accent-dark-t), var(--custom-value-dark7)) !important;
+  --tsv-chat-widget-bg: var(--custom-value-dark5) !important;
+  --card-outline: var(--custom-color-accent-light) !important;
+  --tsv-deviant-bg: var(--custom-value-dark5) !important;
+  --tsv-servertree-bg-gradient: linear-gradient(25deg, var(--custom-value-dark5) 0%, var(--custom-value-dark6) 60%) !important;
+  --tsv-view-header-bg: linear-gradient(45deg, var(--custom-value-dark2), var(--custom-value-dark5)) !important;
+  --tsv-view-header-gradient-start: var(--custom-value-dark5) !important;
+  --tsv-server-header-gradient-start: linear-gradient(45deg, var(--custom-value-dark3) 0%, var(--custom-value-dark5) 100%) !important;
+  --tsv-server-header-gradient-end: var(--custom-value-dark5) !important;
+  --card-background: var(--custom-value-dark5) !important;
+  --card-hover-background: var(--custom-value-dark7) !important;
+  --hero-button-background: var(--tsv-font-color) !important;
+  --presence-separator-presence: var(--custom-value-dark7) !important;
+  --horizontal-separator-color: var(--custom-value-dark7) !important;
+  --tsv-side-bar-bg-gradient-bottom: var(--custom-value-dark5) !important;
+  --ts-tree-badges-bg: var(--custom-value-dark7) !important;
+  --highlight-outline-color: var(--custom-color-accent-dark-t) !important;
+  --tsv-preview-bg: var(--custom-value-dark7) !important;
+  --tsv-highlight-header-bg: linear-gradient(to right, var(--custom-color-accent-light-t) 0, var(--custom-value-dark5) 100%) !important;
+  --tsv-icon-tint: var(--custom-color-accent-light) !important;
+  --tsv-icon-tint2: var(--custom-color-accent-light) !important;
+  --ts-brand-color-bl: var(--custom-color-accent-light) !important;
+  --tsv-border-radius: 6px !important;
+  --tsv-border-radius-large: 8px !important;
+  --tsv-border-radius-small: 4px !important;
+  --ts-primary-background: #fafafb !important;
+}
+
+.tsv-icon-teamspeak-label {
+  --tsv-icon-tint: var(--custom-color-accent-light) !important;
+}
+
+.tsv-icon-teamspeak-label .tsv-icon-tint-fill {
+  fill: var(--custom-color-accent-light) !important;
+}
+
+html,
+body,
+#app,
+main {
+  font-family: var(--tsv-font-family) !important;
+  background: #fafafb !important;
+  --tsv-tint: var(--custom-color-accent-light) !important;
+  --tsv-tint2: var(--custom-color-accent-dark) !important;
+  --ts-brand-color-bl: var(--custom-color-accent-light) !important;
+}
+
+button,
+input,
+select,
+textarea,
+label,
+.tsv-font-content,
+.ts-font-content,
+.ts-parsed-text-content {
+  font-family: var(--tsv-font-family) !important;
+}
+
+.tsv-button,
+.tsv-card,
+.tsv-preview,
+.tsv-deviant,
+.tsv-highlight-header,
+.ts-chat-input-container,
+.ts-toggle,
+.tsv-sidebar .tsv-body-background,
+.tsv-dashboard-servers__content,
+.tsv-dashboard-chats,
+.tsv-dashboard-news,
+.tsv-context-menu,
+.ts-context-menu,
+.ts-tooltip,
+.ts-chat-room-event-bubble {
+  border-radius: 6px !important;
+}
+
+/* SERVER CHAT MOVE */
+.tsv-activity-group-list > li li:not(:first-child) {
+  padding-left: calc(var(--tsv-padding-h) + 10px) !important;
+}
+
+/* ATTACHMENTS HEIGHT */
+.ts-chat-message-attachment-myts-file.isImage {
+  height: unset !important;
+}
+
+.ts-chat-message-attachment .ts-chat-message-attachment-inner .ts-chat-message-attachment-image {
+  height: unset !important;
+}
+
+/* CHANNEL BACKGROUND */
+.ts-server-tree-item-background-no-image {
+  background: linear-gradient(to right, #f0f0f3 50%, #e8e8ed 100%) !important;
+}
+
+/* CHANNEL / CLIENT HOVER + SELECTION
+   TS reapplies default tint on the app shell; force accent on the tree. */
+.tsv-sidebar,
+.tsv-activities,
+.ts-server-tree,
+.tsv-item-group,
+.tsv-resize-area-container {
+  --tsv-tint: var(--custom-color-accent-light) !important;
+  --tsv-tint2: var(--custom-color-accent-dark) !important;
+  --tsv-item-selection: color-mix(in srgb, var(--custom-color-accent-light) 22%, #ffffff) !important;
+  --tsv-shaded-item-selection: color-mix(in srgb, var(--custom-color-accent-light) 22%, #ffffff) !important;
+  --tsv-shaded-bg-selection: color-mix(in srgb, var(--custom-color-accent-light) 35%, #ffffff) !important;
+  --highlight-outline-color: var(--custom-color-accent-light) !important;
+}
+
+.ts-server-tree-item-leaf.channel:hover .tsv-item-highlight,
+.ts-server-tree-item-leaf.channel.tsv-selected .tsv-item-highlight,
+.ts-server-tree-item-leaf.channel.tsv-active .tsv-item-highlight,
+.ts-server-tree-item-leaf.client:hover .tsv-item-highlight,
+.ts-server-tree-item-leaf.client.tsv-selected .tsv-item-highlight,
+.ts-server-tree-item-leaf.client.tsv-active .tsv-item-highlight,
+.tsv-item:hover:not(.spacer) .tsv-item-highlight,
+.tsv-item-selected:not(.spacer) .tsv-item-highlight,
+.tsv-selected:not(.spacer) .tsv-item-highlight,
+.tsv-sidebar .tsv-item-highlight,
+.tsv-activity-secondary .tsv-item-highlight,
+.tsv-dashboard-widget .tsv-item-highlight {
+  background: color-mix(in srgb, var(--custom-color-accent-light) 22%, #ffffff) !important;
+}
+
+.ts-server-tree-item-leaf.channel.tsv-selected .ts-server-tree-item-background-image,
+.ts-server-tree-item-leaf.channel.tsv-selected .ts-server-tree-item-background-no-image,
+.ts-server-tree-item-leaf.channel.tsv-selected .tsv-item-highlight,
+.ts-server-tree-item-leaf.client.tsv-selected .ts-server-tree-item-background-image,
+.ts-server-tree-item-leaf.client.tsv-selected .ts-server-tree-item-background-no-image,
+.ts-server-tree-item-leaf.client.tsv-selected .tsv-item-highlight {
+  box-shadow: 0 0 0 1px var(--custom-color-accent-light) !important;
+}
+
+.ts-server-tree-item-leaf.channel.tsv-active .ts-server-tree-item-background-image,
+.ts-server-tree-item-leaf.channel.tsv-active .ts-server-tree-item-background-no-image,
+.ts-server-tree-item-leaf.channel.tsv-active .tsv-item-highlight,
+.ts-server-tree-item-leaf.client.tsv-active .ts-server-tree-item-background-image,
+.ts-server-tree-item-leaf.client.tsv-active .ts-server-tree-item-background-no-image,
+.ts-server-tree-item-leaf.client.tsv-active .tsv-item-highlight {
+  box-shadow: 0 0 0 1px var(--custom-color-accent-dark) !important;
+}
+
+/* SERVER TREE HORIZONTAL LINE */
+.tsv-footer::before {
+  border-top-color: var(--custom-value-dark7) !important;
+}
+
+/* SPACER GRADIENT */
+.ts-server-tree-item-leaf.spacer .ts-server-tree-item-background-no-image,
+.ts-server-tree-item-leaf.spacer .tsv-item-highlight {
+  background: linear-gradient(-115deg, var(--custom-value-dark7), var(--custom-color-accent-light-t)) !important;
+}
+
+/* BACKGROUND COLOR */
+.tsv-sidebar .tsv-body-background {
+  background: linear-gradient(to bottom, var(--ts-new-header-bg), var(--tsv-side-bar-bg-gradient-bottom)) !important;
+}
+
+/* ANIMATION HERO BUTTON */
+.tsv-button-hero {
+  animation: pulse 2s infinite !important;
+  box-shadow: 0px 0px 0px 0px #909090 !important;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0px 0px 0px 0px #909090 !important;
+  }
+  70% {
+    box-shadow: 0px 0px 0px 10px rgba(37, 221, 133, 0) !important;
+  }
+  100% {
+    box-shadow: 0px 0px 0px 0px rgba(37, 221, 133, 0) !important;
+  }
+}
+
+/* DISCOVERY HEADER */
+.ts-discovery-header.ts-default-background {
+  background: linear-gradient(45deg, var(--tsv-server-header-gradient-start) 0%, var(--tsv-server-header-gradient-end) 100%) !important;
+}
+
+.ts-discovery-header.ts-default-background:before {
+  -webkit-mask: none !important;
+}
+
+/* DASHBOARD */
+.tsv-dashboard-servers__content,
+.tsv-dashboard-chats,
+.tsv-dashboard-news,
+.ts-discovery-wrapper {
+  background: linear-gradient(45deg, var(--tsv-server-header-gradient-end) 0%, var(--strong-bg) 100%) !important;
+}
+
+/* SERVER TREE OUTLINE */
+.ts-server-header .tsv-view-banner.tsv-active .tsv-view-background::after,
+.ts-account-settings-view .tsv-view-banner.tsv-active .tsv-view-background::after {
+  border: none !important;
+}
+
+/* LINK COLOR */
+.ts-chat-room-event-detailed .ts-chat-room-event-bubble a {
+  color: var(--custom-color-accent-dark) !important;
+}
+
+/* ATTACHMENT BORDER */
+.ts-rendered-message:not(.ts-currently-referencing, .ts-chat-room-event-selected)
+  .ts-chat-message-attachment
+  .ts-chat-message-attachment-inner {
+  border-color: var(--tsv-contrast-bg) !important;
+}
+
+/* BOLD STRENGTH */
+strong {
+  font-weight: 700 !important;
+}
+
+/* REPLY & EDIT & MENTION */
+.ts-chat-room-event-bubble.self-mention {
+  --tsv-chat-link-color: var(--custom-value-on-accent) !important;
+}
+
+.ts-currently-referencing .ts-chat-room-event-bubble {
+  background: var(--custom-color-accent-dark) !important;
+  --tsv-chat-link-color: var(--custom-value-on-accent) !important;
+  color: var(--custom-value-on-accent) !important;
+}
+
+.ts-currently-referencing .ts-chat-room-event-bubble::before {
+  border-right: 6px solid var(--custom-color-accent-dark) !important;
+}
+
+.ts-rendered-message .ts-reply .ts-reply-icon {
+  --tsv-icon-base: var(--tsv-font-subtitle-color) !important;
+}
+
+.ts-currently-referencing .ts-chat-message-attachment-footer.ts-noselect > a {
+  color: var(--custom-value-on-accent) !important;
+}
+
+.ts-currently-referencing .ts-chat-message-attachment .ts-chat-message-attachment-inner .ts-chat-message-attachment-generic-file {
+  background: var(--custom-color-accent-dark) !important;
+}
+
+.ts-chat-room-event-selected
+  div.ts-chat-message-attachment-header
+  > div.ts-chat-message-attachment-link.ts-chat-message-attachment-header-title
+  > a {
+  color: var(--custom-value-on-accent) !important;
+}
+
+/* TOGGLE */
+.ts-toggle-inner.checked:after {
+  background: var(--custom-color-accent-light) !important;
+}
+
+.ts-toggle.checked {
+  border: 1px solid var(--custom-color-accent-light) !important;
+}
+
+/* INFO NOTE */
+.tsv-server-info-footer {
+  color: var(--tsv-font-subtitle-color) !important;
+}
+
+/* DRAG N DROP */
+.ts-dnd-drag-into:after {
+  background-color: var(--custom-color-accent-light-t) !important;
+  border: 1px solid var(--custom-color-accent-light) !important;
+}
+
+/* MULTISELECT */
+.ts-chat-room-event-compact.ts-chat-room-event-selected .ts-chat-message-compact-container .actual:before {
+  box-shadow: 0 0 0 1px var(--custom-color-accent-dark) !important;
+  background: var(--custom-color-accent-dark) !important;
+}
+
+.ts-chat-room-event-selected .ts-chat-message-attachment-container .ts-chat-message-attachment-inner {
+  --room-event-highlight-border: var(--custom-color-accent-light) !important;
+  --room-event-highlight-border2: var(--custom-color-accent-dark) !important;
+  --room-event-highlight-bg: var(--custom-color-accent-dark) !important;
+  --tsv-shaded-bg-selection: var(--custom-color-accent-dark) !important;
+  background: var(--custom-color-accent-dark) !important;
+  border-color: var(--custom-color-accent-light) !important;
+}
+
+.ts-chat-room-event-selected:before {
+  box-shadow: 0 0 0 1px var(--custom-color-accent-dark) !important;
+  background: var(--custom-color-accent-dark) !important;
+}
+
+.ts-chat-room-event-selected .ts-chat-message-system-body:before {
+  background: var(--custom-color-accent-dark) !important;
+  box-shadow: 0 0 0 1px var(--custom-color-accent-dark) !important;
+}
+
+.ts-chat-room-event-selected .ts-chat-message-attachment-footer.ts-noselect > a {
+  color: var(--custom-value-on-accent) !important;
+}
+
+.ts-chat-room-event-selected .ts-chat-message-attachment .ts-chat-message-attachment-inner .ts-chat-message-attachment-generic-file {
+  background: var(--custom-color-accent-dark) !important;
+  box-shadow: 0 0 0 1px var(--custom-color-accent-dark) !important;
+}
+
+/* SERVER EVENTS */
+.ts-server-events-list li.ts-event-cyan,
+.ts-server-logs-list li.ts-event-cyan {
+  border-left-color: var(--default-tsv-tint) !important;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+::-webkit-scrollbar {
+  width: var(--custom-value-scrollbar-width) !important;
+  height: 0px !important;
+}
+
+::-webkit-scrollbar-thumb,
+.ts-chunk-scroll-track__thumb {
+  background-color: var(--custom-color-accent-light) !important;
+}
+
+/* SLIDER */
+.ts-slider-segment-value.ts-slider-segment-value-on {
+  background: linear-gradient(90deg, var(--custom-color-slider1), var(--custom-color-slider1)) border-box !important;
+}
+
+.ts-slider-segment-value.ts-slider-segment-value-off {
+  background: linear-gradient(90deg, var(--custom-color-slider2), var(--custom-color-slider2)) border-box !important;
+}
+
+/* CHAT INPUT */
+.ts-chat-input-container.focus,
+.ts-chat-input-container:hover {
+  border: 1px solid var(--custom-color-accent-light) !important;
+  background-color: var(--custom-value-dark1) !important;
+}
+
+.ts-chat-input-container {
+  border: 1px solid var(--tsv-shaded-bg) !important;
+  background-color: var(--custom-value-dark1) !important;
+}
+
+/* BUBBLES */
+.ts-chat-room-event-detailed:not(.ts-currently-referencing, .apparently-people-like-huge-faces) .ts-chat-room-event-bubble {
+  background: var(--tsv-chat-self-bg) !important;
+}
+
+.ts-chat-room-event-detailed:not(.ts-currently-referencing, .apparently-people-like-huge-faces) .ts-chat-room-event-bubble::before {
+  border-right: 6px solid var(--tsv-chat-self-bg) !important;
+}
+
+.ts-chat-room-event-detailed .ts-chat-room-event-bubble.self-mention {
+  background: var(--custom-color-accent-dark) !important;
+  color: var(--custom-value-on-accent) !important;
+}
+
+.ts-chat-room-event-detailed .ts-chat-room-event-bubble.self-mention::before {
+  border-right: 6px solid var(--custom-color-accent-dark) !important;
+}
+
+.ts-parsed-text-content .spoiler:not([visible]) {
+  background-color: #acadb1 !important;
+}
+
+:root,
+::before,
+::after {
+  /* Glass tunables (light) */
+  --glass-blur: 8px;
+  --glass-saturation: 140%;
+  --glass-shadow: 0 6px 18px rgba(28, 28, 34, 0.12);
+  --glass-radius: 6px;
+
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-bg-strong: rgba(255, 255, 255, 0.88);
+  --glass-border: var(--custom-color-accent-light-t);
+
+  --glass-tint: linear-gradient(165deg, var(--custom-color-accent-light-t) 0%, rgba(255, 255, 255, 0.55) 38%, rgba(255, 255, 255, 0) 78%);
+  --glass-tint-strong: linear-gradient(165deg, var(--custom-color-accent-light-t) 0%, var(--custom-color-accent-dark-t) 28%, rgba(255, 255, 255, 0.35) 72%);
+
+  --glass-bubble-bg: rgba(255, 255, 255, 0.78);
+  --glass-menu-bg: rgba(255, 255, 255, 0.94);
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .tsv-sidebar .tsv-body-background {
+    background: var(--glass-tint), var(--glass-bg) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(var(--glass-blur));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(var(--glass-blur));
+    box-shadow: var(--glass-shadow);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--glass-radius);
+  }
+
+  .tsv-view-banner .tsv-view-background,
+  .tsv-view-header,
+  .ts-server-header,
+  .ts-new-header-bg {
+    background: var(--glass-tint-strong), var(--glass-bg-strong) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
+    box-shadow: var(--glass-shadow);
+    border-bottom: 1px solid var(--glass-border);
+    border-radius: 6px;
+  }
+
+  .tsv-dashboard-servers__content,
+  .tsv-dashboard-chats,
+  .tsv-dashboard-news,
+  .ts-discovery-wrapper {
+    background: var(--glass-tint), var(--glass-bg) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(var(--glass-blur));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(var(--glass-blur));
+    box-shadow: var(--glass-shadow);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--glass-radius);
+  }
+
+  .tsv-card,
+  .tsv-preview,
+  .tsv-deviant,
+  .tsv-highlight-header {
+    background: var(--glass-bg) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--glass-radius);
+  }
+
+  .ts-chat-input-container {
+    background-color: var(--glass-bg-strong) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.7));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.7));
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: 0 4px 16px rgba(28, 28, 34, 0.08);
+    border-radius: var(--glass-radius);
+  }
+  .ts-chat-input-container.focus,
+  .ts-chat-input-container:hover {
+    background-color: var(--glass-bg-strong) !important;
+    box-shadow: 0 6px 20px rgba(28, 28, 34, 0.12);
+    border-color: var(--custom-color-accent-light) !important;
+  }
+
+  .ts-chat-room-event-detailed:not(.ts-currently-referencing, .apparently-people-like-huge-faces) .ts-chat-room-event-bubble {
+    background: var(--glass-bubble-bg) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.6));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.6));
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+  }
+  .ts-chat-room-event-detailed:not(.ts-currently-referencing, .apparently-people-like-huge-faces) .ts-chat-room-event-bubble::before {
+    border-right-color: var(--glass-bubble-bg) !important;
+  }
+
+  .ts-chat-message-attachment .ts-chat-message-attachment-inner {
+    background: var(--glass-bg) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.5));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.5));
+    border-color: var(--glass-border) !important;
+    border-radius: 6px;
+  }
+
+  .tsv-context-menu,
+  .ts-context-menu,
+  .menu,
+  .ts-tooltip {
+    background: var(--glass-menu-bg) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: var(--glass-shadow);
+    border-radius: var(--glass-radius);
+  }
+
+  :root,
+  ::before,
+  ::after {
+    --tsv-context-menu-border: var(--glass-border) !important;
+    --ts-context-menu-background: var(--glass-menu-bg) !important;
+    --card-background: var(--glass-bg) !important;
+    --card-hover-background: var(--glass-bg-strong) !important;
+    --tsv-preview-bg: var(--glass-bg) !important;
+  }
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .tsv-sidebar .tsv-body-background,
+  .tsv-view-banner .tsv-view-background,
+  .tsv-view-header,
+  .ts-server-header,
+  .ts-new-header-bg,
+  .tsv-dashboard-servers__content,
+  .tsv-dashboard-chats,
+  .tsv-dashboard-news,
+  .ts-discovery-wrapper,
+  .tsv-card,
+  .tsv-preview,
+  .tsv-deviant,
+  .tsv-highlight-header,
+  .ts-chat-input-container,
+  .ts-chat-room-event-detailed:not(.ts-currently-referencing, .apparently-people-like-huge-faces) .ts-chat-room-event-bubble,
+  .ts-chat-message-attachment .ts-chat-message-attachment-inner,
+  .tsv-context-menu,
+  .ts-context-menu,
+  .menu,
+  .ts-tooltip {
+    background: #ffffff !important;
+    border: 1px solid var(--custom-color-accent-light-t) !important;
+    box-shadow: 0 6px 16px rgba(28, 28, 34, 0.1) !important;
+    border-radius: 6px !important;
+  }
+  .ts-chat-room-event-detailed:not(.ts-currently-referencing, .apparently-people-like-huge-faces) .ts-chat-room-event-bubble::before {
+    border-right-color: rgba(255, 255, 255, 0.92) !important;
+  }
+}

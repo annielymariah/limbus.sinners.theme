@@ -83,7 +83,12 @@
   --tsv-contrast-strong-bg: var(--custom-value-dark1) !important;
   --ts-context-menu-background: var(--custom-value-dark2) !important;
   --tsv-context-menu-border: var(--custom-value-dark2) !important;
-  --tsv-context-menu-item-selection: #373741 !important;
+  --tsv-context-menu-item-selection: color-mix(in srgb, var(--custom-color-accent-dark) 55%, #0a0a0c) !important;
+  --tsv-item-selection: color-mix(in srgb, var(--custom-color-accent-dark) 45%, #0a0a0c) !important;
+  --tsv-shaded-item-selection: color-mix(in srgb, var(--custom-color-accent-dark) 45%, #0a0a0c) !important;
+  --tsv-shaded-bg-selection: var(--custom-color-accent-dark) !important;
+  --ts-menu-action-background-hover: var(--custom-color-accent-dark) !important;
+  --ts-tree-item-hover-bg-color: var(--custom-color-accent-dark-t) !important;
   --tsv-header-bg: linear-gradient(to bottom, var(--tsv-shaded-bg), var(--tsv-contrast-bg)) !important;
   --ts-chat-system-message-bg: var(--tsv-contrast-bg) !important;
   --tsv-unrelated-activity-header-bg: none !important;
@@ -144,6 +149,9 @@ body,
 main {
   font-family: var(--tsv-font-family) !important;
   background: #000000 !important;
+  --tsv-tint: var(--custom-color-accent-light) !important;
+  --tsv-tint2: var(--custom-color-accent-light) !important;
+  --ts-brand-color-bl: var(--custom-color-accent-light) !important;
 }
 
 button,
@@ -196,7 +204,56 @@ label,
 /* CHANNEL BACKGROUND */
 .ts-server-tree-item-background-no-image {
   background: linear-gradient(to right, #050506 50%, #0a0a0c 100%) !important;
-  }
+}
+
+/* CHANNEL / CLIENT HOVER + SELECTION
+   TS reapplies --tsv-tint (#1588FA) on the app shell; force accent on the tree. */
+.tsv-sidebar,
+.tsv-activities,
+.ts-server-tree,
+.tsv-item-group,
+.tsv-resize-area-container {
+  --tsv-tint: var(--custom-color-accent-light) !important;
+  --tsv-tint2: var(--custom-color-accent-light) !important;
+  --tsv-item-selection: color-mix(in srgb, var(--custom-color-accent-dark) 45%, #0a0a0c) !important;
+  --tsv-shaded-item-selection: color-mix(in srgb, var(--custom-color-accent-dark) 45%, #0a0a0c) !important;
+  --tsv-shaded-bg-selection: var(--custom-color-accent-dark) !important;
+  --highlight-outline-color: var(--custom-color-accent-light) !important;
+}
+
+.ts-server-tree-item-leaf.channel:hover .tsv-item-highlight,
+.ts-server-tree-item-leaf.channel.tsv-selected .tsv-item-highlight,
+.ts-server-tree-item-leaf.channel.tsv-active .tsv-item-highlight,
+.ts-server-tree-item-leaf.client:hover .tsv-item-highlight,
+.ts-server-tree-item-leaf.client.tsv-selected .tsv-item-highlight,
+.ts-server-tree-item-leaf.client.tsv-active .tsv-item-highlight,
+.tsv-item:hover:not(.spacer) .tsv-item-highlight,
+.tsv-item-selected:not(.spacer) .tsv-item-highlight,
+.tsv-selected:not(.spacer) .tsv-item-highlight,
+.tsv-sidebar .tsv-item-highlight,
+.tsv-activity-secondary .tsv-item-highlight,
+.tsv-dashboard-widget .tsv-item-highlight {
+  background: color-mix(in srgb, var(--custom-color-accent-dark) 45%, #0a0a0c) !important;
+}
+
+/* Selected outline uses box-shadow: 0 0 0 1px var(--tsv-tint) — keep it on accent */
+.ts-server-tree-item-leaf.channel.tsv-selected .ts-server-tree-item-background-image,
+.ts-server-tree-item-leaf.channel.tsv-selected .ts-server-tree-item-background-no-image,
+.ts-server-tree-item-leaf.channel.tsv-selected .tsv-item-highlight,
+.ts-server-tree-item-leaf.client.tsv-selected .ts-server-tree-item-background-image,
+.ts-server-tree-item-leaf.client.tsv-selected .ts-server-tree-item-background-no-image,
+.ts-server-tree-item-leaf.client.tsv-selected .tsv-item-highlight {
+  box-shadow: 0 0 0 1px var(--custom-color-accent-light) !important;
+}
+
+.ts-server-tree-item-leaf.channel.tsv-active .ts-server-tree-item-background-image,
+.ts-server-tree-item-leaf.channel.tsv-active .ts-server-tree-item-background-no-image,
+.ts-server-tree-item-leaf.channel.tsv-active .tsv-item-highlight,
+.ts-server-tree-item-leaf.client.tsv-active .ts-server-tree-item-background-image,
+.ts-server-tree-item-leaf.client.tsv-active .ts-server-tree-item-background-no-image,
+.ts-server-tree-item-leaf.client.tsv-active .tsv-item-highlight {
+  box-shadow: 0 0 0 1px var(--custom-color-accent-dark) !important;
+}
 
 /* SERVER TREE HORIZONTAL LINE */
 .tsv-footer::before {

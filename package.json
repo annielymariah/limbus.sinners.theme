@@ -1,7 +1,7 @@
 {
     "name": "Limbus Company Sinners",
-    "description": "Dark and light TeamSpeak themes with each Sinner's name and principal color, plus glassmorphism. Based on Neon Reaper Dark (https://github.com/AnthonyDac/neon-reaper-dark).",
-    "version": "2.2.0",
+    "description": "A TeamSpeak theme with each Sinner's name and principal color, glassmorphism, and stock Dark/Light support. Based on Neon Reaper Dark (https://github.com/AnthonyDac/neon-reaper-dark).",
+    "version": "2.3.0",
     "identifier": "limbus.sinners.theme",
     "engines": {
         "teamspeak": 1
@@ -32,12 +32,6 @@
                 "apiVersion": 1
             },
             {
-                "name": "02 Faust Light",
-                "source": "FaustLight.css",
-                "image": "Faust.png",
-                "apiVersion": 1
-            },
-            {
                 "name": "03 Don Quixote",
                 "source": "DonQuixote.css",
                 "image": "DonQuixote.png",
@@ -46,12 +40,6 @@
             {
                 "name": "04 Ryōshū",
                 "source": "Ryoshu.css",
-                "image": "Ryoshu.png",
-                "apiVersion": 1
-            },
-            {
-                "name": "04 Ryōshū Light",
-                "source": "RyoshuLight.css",
                 "image": "Ryoshu.png",
                 "apiVersion": 1
             },
@@ -68,20 +56,8 @@
                 "apiVersion": 1
             },
             {
-                "name": "06 Hong Lu Light",
-                "source": "HongLuLight.css",
-                "image": "HongLu.png",
-                "apiVersion": 1
-            },
-            {
                 "name": "07 Heathcliff",
                 "source": "Heathcliff.css",
-                "image": "Heathcliff.png",
-                "apiVersion": 1
-            },
-            {
-                "name": "07 Heathcliff Light",
-                "source": "HeathcliffLight.css",
                 "image": "Heathcliff.png",
                 "apiVersion": 1
             },
@@ -92,32 +68,14 @@
                 "apiVersion": 1
             },
             {
-                "name": "08 Ishmael Light",
-                "source": "IshmaelLight.css",
-                "image": "Ishmael.png",
-                "apiVersion": 1
-            },
-            {
                 "name": "09 Rodion",
                 "source": "Rodion.css",
                 "image": "Rodion.png",
                 "apiVersion": 1
             },
             {
-                "name": "09 Rodion Light",
-                "source": "RodionLight.css",
-                "image": "Rodion.png",
-                "apiVersion": 1
-            },
-            {
                 "name": "10 Dante",
                 "source": "Dante.css",
-                "image": "Dante.png",
-                "apiVersion": 1
-            },
-            {
-                "name": "10 Dante Light",
-                "source": "DanteLight.css",
                 "image": "Dante.png",
                 "apiVersion": 1
             },
